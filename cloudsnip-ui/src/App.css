@@ -43,6 +43,24 @@
   z-index: 0;
 }
 
+.skip-link {
+  position: absolute;
+  top: -80px;
+  left: 1rem;
+  z-index: 20;
+  background: #ffffff;
+  color: #0b1620;
+  border: 1px solid #cfe4eb;
+  border-radius: 10px;
+  padding: 0.5rem 0.75rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
 @keyframes floatGlow {
   from {
     transform: translateY(-8px) scale(1);
@@ -117,12 +135,11 @@
   text-decoration: none;
 }
 
-.brand-mark {
+.cloudsnip-logo {
   width: 34px;
   height: 34px;
-  border-radius: 12px;
-  background: linear-gradient(150deg, #06736b 0%, #2bb8a8 45%, #ff9f43 100%);
-  box-shadow: 0 12px 20px #06736b42;
+  flex-shrink: 0;
+  filter: drop-shadow(0 10px 16px #06736b33);
 }
 
 .brand strong {
@@ -521,6 +538,61 @@
   padding: 2.2rem 0 3.4rem;
 }
 
+.faq-section {
+  padding: 2.3rem 0 1.2rem;
+}
+
+.faq-head h2 {
+  margin: 0.76rem 0 0;
+  font-family: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(1.44rem, 2.8vw, 2rem);
+  letter-spacing: -0.02em;
+}
+
+.faq-grid {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.faq-item {
+  border: 1px solid #cfe2e8;
+  border-radius: 18px;
+  background: linear-gradient(160deg, #ffffffd6, #f3f9fddd);
+  box-shadow: 0 8px 16px #264a5e0d;
+  padding: 1rem 1.05rem;
+  animation: fadeInUp 0.55s ease-out both;
+}
+
+.faq-item h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-family: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+}
+
+.faq-item p {
+  margin: 0.58rem 0 0;
+  color: var(--muted);
+  line-height: 1.62;
+}
+
+.faq-grid > .faq-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.faq-grid > .faq-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.faq-grid > .faq-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.faq-grid > .faq-item:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
 .cta-panel {
   display: grid;
   gap: 1.5rem;
@@ -658,6 +730,10 @@
   .cta-panel {
     grid-template-columns: 1fr;
   }
+
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 840px) {
@@ -684,5 +760,15 @@
   .hero-actions {
     display: grid;
     grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
   }
 }

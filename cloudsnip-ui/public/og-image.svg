@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">CloudSnip - 7-Day Cloud Cost Teardown</title>
+  <desc id="desc">Cut AWS, GCP, and Azure cloud spend with an execution-ready cost optimization backlog.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f0f8fc" />
+      <stop offset="45%" stop-color="#f7fcff" />
+      <stop offset="100%" stop-color="#eaf6fc" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#06736b" />
+      <stop offset="100%" stop-color="#0b1620" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <circle cx="1030" cy="90" r="180" fill="#b6ebda" opacity="0.5" />
+  <circle cx="160" cy="530" r="160" fill="#ffe3bd" opacity="0.6" />
+
+  <rect x="80" y="78" width="1040" height="474" rx="30" fill="#ffffff" opacity="0.92" />
+  <rect x="80" y="78" width="1040" height="474" rx="30" fill="none" stroke="#d3e4ea" />
+
+  <g transform="translate(140 150)">
+    <g>
+      <defs>
+        <linearGradient id="logo-bg" x1="0" y1="0" x2="52" y2="52" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#0b1620" />
+          <stop offset="0.56" stop-color="#06736b" />
+          <stop offset="1" stop-color="#2bb8a8" />
+        </linearGradient>
+        <linearGradient id="logo-cut" x1="17" y1="17" x2="33" y2="34" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#ffbf6f" />
+          <stop offset="1" stop-color="#ff8f38" />
+        </linearGradient>
+      </defs>
+      <rect x="0" y="0" width="52" height="52" rx="16" fill="url(#logo-bg)" />
+      <path
+        d="M13.5 34.4h21.5c3.1 0 5.6-2.4 5.6-5.5c0-2.7-2-5.1-4.8-5.5c-0.7-4.7-4.9-8.3-9.9-8.3c-4.9 0-9 3.5-9.8 8h-0.3c-3.5 0-6.4 2.9-6.4 6.4c0 2.7 1.8 4.9 4.1 4.9"
+        fill="#e9fbff"
+        opacity="0.96"
+      />
+      <path d="M18.5 35.5l4.6-6.9m0.5 6.9l4.6-6.9" stroke="url(#logo-cut)" stroke-width="2.8" stroke-linecap="round" />
+      <circle cx="36.8" cy="15.8" r="2.4" fill="#ff9f43" />
+    </g>
+    <text x="68" y="33" font-family="'Space Grotesk', sans-serif" font-size="28" font-weight="700" fill="#0b1620">
+      CloudSnip
+    </text>
+
+    <text x="0" y="96" font-family="'Space Grotesk', sans-serif" font-size="66" font-weight="700" fill="#0b1620">
+      Turn cloud cost
+    </text>
+    <text x="0" y="170" font-family="'Space Grotesk', sans-serif" font-size="66" font-weight="700" fill="#06736b">
+      into runway.
+    </text>
+
+    <text x="0" y="230" font-family="'IBM Plex Sans', sans-serif" font-size="30" fill="#334c5d">
+      7-day teardown for AWS, GCP, and Azure startup spend.
+    </text>
+
+    <rect x="0" y="282" width="404" height="66" rx="33" fill="url(#accent)" />
+    <text x="28" y="324" font-family="'IBM Plex Sans', sans-serif" font-size="28" font-weight="600" fill="#f2f8fb">
+      Get Your Cost Teardown
+    </text>
+  </g>
+</svg>

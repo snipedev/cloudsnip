@@ -1,9 +1,11 @@
+import CloudSnipLogo from './CloudSnipLogo'
+
 export default function SiteHeader() {
   return (
     <header className="topbar">
       <div className="container topbar-inner">
         <a className="brand" href="#top">
-          <span className="brand-mark" />
+          <CloudSnipLogo />
           <span>
             <strong>CloudSnip</strong>
             <small>Cloud cost rescue</small>
@@ -14,6 +16,7 @@ export default function SiteHeader() {
           <a href="#proof">Proof</a>
           <a href="#difference">Why different</a>
           <a href="#how">Process</a>
+          <a href="#faq">FAQ</a>
           <a href="#signup">Get proposal</a>
         </nav>
 

@@ -1,0 +1,17 @@
+{
+  "name": "CloudSnip",
+  "short_name": "CloudSnip",
+  "description": "7-day cloud cost teardown for startup teams on AWS, GCP, and Azure.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f0f8fc",
+  "theme_color": "#0b1620",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
