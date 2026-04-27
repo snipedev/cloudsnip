@@ -1,4 +1,10 @@
 import { useMemo, useState } from 'react'
+import emailjs from '@emailjs/browser'
+
+emailjs.init("JWMie4oJCPfwuZieL");
+
+const EMAILJS_SERVICE_ID = 'service_ulf2lul'
+const EMAILJS_TEMPLATE_ID = 'template_ul7vihs'
 
 export default function EmailSignupForm() {
   const [email, setEmail] = useState('')
@@ -7,16 +13,32 @@ export default function EmailSignupForm() {
   const trimmedEmail = useMemo(() => email.trim(), [email])
   const canSubmit = trimmedEmail.length > 3 && status.state !== 'loading'
 
-  function onSubmit(e) {
+  async function onSubmit(e) {
     e.preventDefault()
+
     setStatus({ state: 'loading', message: '' })
 
-    setTimeout(() => {
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          from_name: trimmedEmail
+        },
+      )
+
       setStatus({
         state: 'success',
         message: "You're on the list. I'll reach out with a short audit proposal.",
       })
-    }, 600)
+
+      setEmail('')
+    } catch {
+      setStatus({
+        state: 'error',
+        message: 'Something went wrong while sending. Please try again in a moment.',
+      })
+    }
   }
 
   return (
@@ -26,6 +48,7 @@ export default function EmailSignupForm() {
       </label>
       <input
         id="email"
+        name="user_email"
         type="email"
         required
         autoComplete="email"
@@ -40,6 +63,12 @@ export default function EmailSignupForm() {
 
       {status.state === 'success' ? (
         <div role="status" className="success-banner">
+          {status.message}
+        </div>
+      ) : null}
+
+      {status.state === 'error' ? (
+        <div role="alert" className="success-banner error-banner">
           {status.message}
         </div>
       ) : null}

@@ -701,6 +701,12 @@
   animation: fadeInUp 0.4s ease-out;
 }
 
+.error-banner {
+  border-color: #f2b9b9;
+  background: #fff2f2;
+  color: #6f1d1d;
+}
+
 .footer {
   padding-bottom: 1.6rem;
 }
