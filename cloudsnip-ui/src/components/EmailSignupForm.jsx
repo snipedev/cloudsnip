@@ -3,7 +3,7 @@ import emailjs from '@emailjs/browser'
 
 emailjs.init("JWMie4oJCPfwuZieL");
 
-const EMAILJS_SERVICE_ID = 'service_ulf2lul'
+const EMAILJS_SERVICE_ID = 'service_1ntiey9'
 const EMAILJS_TEMPLATE_ID = 'template_ul7vihs'
 
 export default function EmailSignupForm() {
